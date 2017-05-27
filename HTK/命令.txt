@@ -1,0 +1,78 @@
+#特征提取
+HCopy -A -D -C config/configwav -S wav/0/wavtomfcc
+HCopy -A -D -C config/configwav -S wav/1/wavtomfcc
+HCopy -A -D -C config/configwav -S wav/2/wavtomfcc
+HCopy -A -D -C config/configwav -S wav/3/wavtomfcc
+HCopy -A -D -C config/configwav -S wav/4/wavtomfcc
+HCopy -A -D -C config/configwav -S wav/5/wavtomfcc
+HCopy -A -D -C config/configwav -S wav/6/wavtomfcc
+HCopy -A -D -C config/configwav -S wav/7/wavtomfcc
+HCopy -A -D -C config/configwav -S wav/8/wavtomfcc
+HCopy -A -D -C config/configwav -S wav/9/wavtomfcc
+
+#初始化，训练
+HInit -A -D -T 1 -S test/0/trainlist.scp -M hmms/hmm0 -H models/hmm_zero -l zero -L lab/0 zero
+HRest -A -D -T 1 -S test/0/trainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_zero -l zero -L lab/0 zero
+HRest -A -D -T 1 -S test/0/trainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_zero -l zero -L lab/0 zero
+HRest -A -D -T 1 -S test/0/trainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_zero -l zero -L lab/0 zero
+
+HInit -A -D -T 1 -S test/1/trainlist.scp -M hmms/hmm0 -H models/hmm_one -l one -L lab/1 one
+HRest -A -D -T 1 -S test/1/trainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_one -l one -L lab/1 one
+HRest -A -D -T 1 -S test/1/trainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_one -l one -L lab/1 one
+HRest -A -D -T 1 -S test/1/trainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_one -l one -L lab/1 one
+
+HInit -A -D -T 1 -S test/2/trainlist.scp -M hmms/hmm0 -H models/hmm_two -l two -L lab/2 two
+HRest -A -D -T 1 -S test/2/trainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_two -l two -L lab/2 two
+HRest -A -D -T 1 -S test/2/trainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_two -l two -L lab/2 two
+HRest -A -D -T 1 -S test/2/trainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_two -l two -L lab/2 two
+
+HInit -A -D -T 1 -S test/3/trainlist.scp -M hmms/hmm0 -H models/hmm_three -l three -L lab/3 three
+HRest -A -D -T 1 -S test/3/trainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_three -l three -L lab/3 three
+HRest -A -D -T 1 -S test/3/trainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_three -l three -L lab/3 three
+HRest -A -D -T 1 -S test/3/trainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_three -l three -L lab/3 three
+
+HInit -A -D -T 1 -S test/4/trainlist.scp -M hmms/hmm0 -H models/hmm_four -l four -L lab/4 four
+HRest -A -D -T 1 -S test/4/trainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_four -l four -L lab/4 four
+HRest -A -D -T 1 -S test/4/trainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_four -l four -L lab/4 four
+HRest -A -D -T 1 -S test/4/trainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_four -l four -L lab/4 four
+
+HInit -A -D -T 1 -S test/5/trainlist.scp -M hmms/hmm0 -H models/hmm_five -l five -L lab/5 five
+HRest -A -D -T 1 -S test/5/trainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_five -l five -L lab/5 five
+HRest -A -D -T 1 -S test/5/trainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_five -l five -L lab/5 five
+HRest -A -D -T 1 -S test/5/trainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_five -l five -L lab/5 five
+
+HInit -A -D -T 1 -S test/6/trainlist.scp -M hmms/hmm0 -H models/hmm_six -l six -L lab/6 six
+HRest -A -D -T 1 -S test/6/trainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_six -l six -L lab/6 six
+HRest -A -D -T 1 -S test/6/trainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_six -l six -L lab/6 six
+HRest -A -D -T 1 -S test/6/trainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_six -l six -L lab/6 six
+
+HInit -A -D -T 1 -S test/7/trainlist.scp -M hmms/hmm0 -H models/hmm_seven -l seven -L lab/7 seven
+HRest -A -D -T 1 -S test/7/trainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_seven -l seven -L lab/7 seven
+HRest -A -D -T 1 -S test/7/trainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_seven -l seven -L lab/7 seven
+HRest -A -D -T 1 -S test/7/trainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_seven -l seven -L lab/7 seven
+
+HInit -A -D -T 1 -S test/8/trainlist.scp -M hmms/hmm0 -H models/hmm_eight -l eight -L lab/8 eight
+HRest -A -D -T 1 -S test/8/trainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_eight -l eight -L lab/8 eight
+HRest -A -D -T 1 -S test/8/trainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_eight -l eight -L lab/8 eight
+HRest -A -D -T 1 -S test/8/trainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_eight -l eight -L lab/8 eight
+
+HInit -A -D -T 1 -S test/9/trainlist.scp -M hmms/hmm0 -H models/hmm_nine -l nine -L lab/9 nine
+HRest -A -D -T 1 -S test/9/trainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_nine -l nine -L lab/9 nine
+HRest -A -D -T 1 -S test/9/trainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_nine -l nine -L lab/9 nine
+HRest -A -D -T 1 -S test/9/trainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_nine -l nine -L lab/9 nine
+
+HInit -A -D -T 1 -S test/sil/alltrainlist.scp -M hmms/hmm0 -H models/hmm_sil -l sil -L lab/sil sil
+HRest -A -D -T 1 -S test/sil/alltrainlist.scp -M hmms/hmm1 -H hmms/hmm0/hmm_sil -l sil -L lab/sil sil
+HRest -A -D -T 1 -S test/sil/alltrainlist.scp -M hmms/hmm2 -H hmms/hmm1/hmm_sil -l sil -L lab/sil  sil
+HRest -A -D -T 1 -S test/sil/alltrainlist.scp -M hmms/hmm3 -H hmms/hmm2/hmm_sil -l sil -L lab/sil  sil
+
+#生成语法
+HParse def/gram.txt def/gram.net
+
+
+#识别
+HVite -A -D -T 1 -H hmms/hmm3/hmm_seven -H hmms/hmm3/hmm_eight -H hmms/hmm3/hmm_three -i result/re.mlf -w def/gram.net def/dict.txt def/hmmlist.txt result/sound7_2.mfcc 
+
+HVite -A -D -T 1 -H hmms/allhmms.mmf -i result/re.mlf -w def/gram.net def/dict.txt def/hmmlist.txt result/sound7_2.mfcc 
+
+

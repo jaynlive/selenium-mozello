@@ -1,0 +1,52 @@
+basepath: "mozello-1"
+log: 
+ path: "{basepath}/log.txt"
+ type: "All"
+browser:                          
+  type: chrome               
+  useremote: true                  
+  remoteurl: "http://192.168.255.1:4444/wd/hub"  
+  useproxy: false                  
+  proxyfile: "{basepath}/proxy.txt"  
+  noproxy: "*.facebook.net,*.facebook.com,facebook.com,*.google-analytics.com,*.google.com,*oauth.googleusercontent.com" 
+  useuseragent: true            
+  useragentfile: "{basepath}/ua.txt"   
+  noimage: false
+  loadingtimeout: 60
+  #addextension: "firebug-2.0.9-fx.xpi"               
+mozello:                       
+  accounts:
+    maxaccountspan: 5
+    minaccountspan: 1                                
+    type: rand            
+    hostfile: "{basepath}/hosts.txt" 
+    accountregx: 
+    usernameregx:  
+    passwordregx: 
+    mozellodomregx: 
+    usernameregx: 
+    
+    accountfile: "{basepath}/account.txt"  
+    accountindexfile: "{basepath}/accountindex.txt"
+    resultoutput: mysql
+    resultfile: "{basepath}/result.txt"  
+    db_server:  127.0.0.1
+    db_user: root
+    db_pwd: root
+    db_use: mozello
+
+  register:
+    waittime: 120
+    trycaptcher: 8
+    TTS:
+      token: '24.092e68da5256403785a4dd4d6f7f0c3c.2592000.1447549931.282335-7036957'
+      voicepath: "{basepath}/sound"
+      format: 'wav'
+      rate: 16000
+      language: en
+
+  emailconfirm:
+    url: "http://45.42.84.154:12315/zp-work/URL/Mozello/"
+    retrytime: 3
+    retrysleep: 2
+    retrysendEmail: 2

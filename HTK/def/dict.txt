@@ -1,0 +1,12 @@
+ZERO [zero] zero
+ONE [one] one
+TWO [two] two
+THREE [three] three
+FOUR [four] four
+FIVE [five] five
+SIX [six] six
+SEVEN [seven] seven
+EIGHT [eight] eight
+NINE [nine] nine
+START_SIL [sil] sil
+END_SIL [sil] sil

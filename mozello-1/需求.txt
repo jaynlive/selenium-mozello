@@ -1,0 +1,25 @@
+WordPress注册需求
+1.注册 www.WordPress.com 用户 并认证邮箱
+2.使用 se 开发框架
+3.注册邮箱 可指定 邮箱后缀    随机生成   wordpress前缀域名+前缀 +密码 
+  也可通过文件读入用户名密码 (文件每行一个账号，格式   email`password`dom (邮箱/密码/wordpress前缀域名，前缀域名可为空，为空随机生成)
+4.可使用代理/ua （se开发框架已经支持）
+5.邮箱认证（需要将邮件的内容发给我，修改后台程序将邮箱的验证URL提取完后，到时候提供一个URL获取验证的内容）
+6.可指定输出文件路径，名称  每行输出格式 email`password`wordpress前缀域名`proxy`ua`起始注册时间`截至注册时间`是否成功
+
+
+
+1.accounts里面增加一个标志是输出到文件还是到数据库
+2.输出到文件的话 指定outputfile
+3.输出到数据库的话 .指定参数  db_server（数据库服务器）  db_user（数据库用户名） db_pwd（数据库密码）  db_use（使用的库）
+4.成功的帐号和失败的帐号分两个表
+
+
+登录功能先用文件读入，文件内容 就是帐号输出的那些内容。每个字段用`隔开
+
+
+网站：
+mozello
+sitey
+websitebuilder
+webstarts

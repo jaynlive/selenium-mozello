@@ -1,0 +1,21 @@
+  login:
+    waittime: 5
+    logintype: mysql
+    loginfile: "{basepath}/result.txt"
+    loginindexfile: "{basepath}/loginindex.txt"
+    frommysqlindex: "{basepath}/mysqlloginindex.txt"
+    retrylogin: 1
+    retrysleep: 1
+    retrytime: 2
+
+！！！！！！！！login 才register音揖扮贋壓！！！！！！！！！
+
+  register:
+    waittime: 10 
+    trycaptcher: 5
+
+  emailconfirm:
+    url: "http://45.42.84.154:12315/zp-work/URL/Mozello/"
+    retrytime: 3
+    retrysleep: 2
+    retrysendEmail: 2
